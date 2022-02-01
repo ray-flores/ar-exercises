@@ -9,4 +9,13 @@ puts "----------"
 
 # Your code goes here ...
 
-puts Store.sum(annual_revenue)
+@total_revenue = Store.sum(:annual_revenue)
+
+@avg_store_revenue = Store.average(:annual_revenue)
+
+puts @total_revenue
+puts @avg_store_revenue
+
+@generates_1M = Store.where("annual_revenue >= ?", 1000000).count
+
+puts @generates_1M
