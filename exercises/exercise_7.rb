@@ -10,3 +10,8 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+name_input = gets.chomp
+
+new_store = Store.create(name: "#{name_input}")
+
